@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> B I E N V E N I D O </title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido a la App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-      <center>  <h1> B I E N V E N I DO </h1>  </center>
-    </header>
-    <input type="button" name="boton" value="Tema de Página" onclick="otraFuncion()">
+  <header>
+    <h1 id="titulo">Bienvenido/a a la app de Karl</h1>
+  </header>
+
+  <main>
+    <section class="acciones">
+      <button onclick="cambiarColorBoton()">Cambiar color del botón</button>
+      <button onclick="toggleTema()">Modo Claro</button>
+      <button onclick="cambiarTitulo()">Cambiar título</button>
+      <button onclick="reiniciarPagina()">Reiniciar Página</button>
+      <button onclick="cambiarFuente()">Cambiar Fuente de Texto</button>
+      <button onclick="reiniciarFuente()">Reiniciar Fuente</button>
+      <button onclick="alertaRandom()">Alertas Random</button>
+    </section>
+
+    <section class="contador">
+      <h2>Contador de Clicks</h2>
+      <p id="contador">0</p>
+      <button onclick="incrementarContador()">CLICK!</button>
+    </section>
+
+    <section class="paisaje">
+      <h2>Paisajes Random</h2>
+      <button onclick="mostrarPaisaje()">Mostrar Paisaje</button>
+      <button onclick="ocultarPaisaje()">Ocultar Imagen</button>
+      <img id="imagenPaisaje" alt="Paisaje aleatorio" />
+    </section>
+
+    <section class="hora">
+      <h2>Hora local comparada con Los Ángeles</h2>
+      <p id="horaLocal"></p>
+      <p id="horaLA"></p>
+      <p id="diferencia"></p>
+    </section>
+
+    <section class="gif">
+      <h2>GIF Super Épico</h2>
+      <button onclick="mostrarGif()">Mostrar GIF</button>
+      <button onclick="eliminarGif()">Eliminar GIF</button>
+      <div id="contenedorGif"></div>
+    </section>
+
+    <section class="vacaciones">
+      <h2>Lugar recomendado para unas vacaciones</h2>
+      <button onclick="mostrarLugar()">Mostrar Lugar</button>
+      <p id="lugarTexto"></p>
+    </section>
+
+    <section class="extra">
+      <h2>Chiste del día 😆</h2>
+      <button onclick="mostrarChiste()">Contar Chiste</button>
+      <p id="chisteTexto"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 App de Karl - Demo</p>
+  </footer>
 </body>
 </html>
